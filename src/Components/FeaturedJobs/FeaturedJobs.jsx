@@ -15,7 +15,7 @@ const FeaturedJobs = () => {
         < div >
             <div className="text-center">
                 <h2 className="text-3xl">Featured Jobs: {jobs.length}</h2>
-                <p>Explore thousands of job opportunities with all the information you need. It's your future</p>
+                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
             <div className="grid grid-cols-2 gap-6 mt-10">
                 {

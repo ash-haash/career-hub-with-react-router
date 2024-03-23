@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import { IoLocationOutline } from "react-icons/io5";
 import { BiDollarCircle } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 
 
 const Job = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
+    const { logo, id, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
         <div>
             <div className="card card-compact  bg-base-100 shadow-xl">
@@ -22,7 +23,9 @@ const Job = ({ job }) => {
                         <h2 className="text-gray-500 flex items-center"><BiDollarCircle className="text-2xl mr-2 font-light" />{salary}</h2>
                     </div>
                     <div className="card-actions">
-                        <button className="btn btn-primary">View Details</button>
+                        <Link to={`/job/${id}`}>
+                            <button className="btn btn-primary">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>
